@@ -69,7 +69,7 @@ getMenu();
 if(id){
     getSingleEvent(id);
 }
-if(genreid){
+else if(genreid){
     getEventsByGenre(genreid);
 }
 else{
