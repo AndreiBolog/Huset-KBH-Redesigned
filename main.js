@@ -18,7 +18,7 @@ function showMenu(genres){
     //console.log(genres);
     let linkTemplate = document.querySelector('#linkTemplate').content;
     genres.forEach(function(genre){
-        if(genre.count > 0 && genre.id == 52 || genre.id == 53){
+        if(genre.count > 0 && genre.id == 52 || genre.id == 53 ){
         let clone = linkTemplate.cloneNode(true);
         let parent = document.querySelector('.genre-menu');
 
@@ -31,9 +31,12 @@ function showMenu(genres){
 function showSingleEvent(data){
     //console.log(data);
     document.querySelector('#single h1').textContent=data.title.rendered;
+    document.querySelector('.date span').textContent=data.date.slice(0,data.date.indexOf('T'));
     document.querySelector('#single img').setAttribute('src',data._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url);
     document.querySelector('.content').innerHTML=data.content.rendered;
     document.querySelector('.price span').textContent=data.acf.price;
+        document.querySelector('.venue span').textContent=data.acf.venue;
+
 
 }
 function showEvents(data){
