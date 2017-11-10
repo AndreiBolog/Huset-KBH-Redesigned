@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test webapp</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Test event</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
 
-<body>
-<div class="navibar">
+    <body>
+       <div class="navibar">
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     <form>
   <input type="text" name="search" placeholder="Search..">
 </form>
-     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+
+ <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 800 200" style="enable-background:new 0 0 800 200;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#231F20;}
@@ -74,21 +75,20 @@
         <template id="linkTemplate">
             <a href="#"></a>
         </template>
-
-
-
-    <section id="list" style="background-color: #7C90DB">
-
-    </section>
-    <template id="eventTemplate">
-    <article class="event">
-        <h1></h1>
-        <img src="" alt="">
-        <div class="excerpt"></div>
-        <p class="price">Price: <span></span> DKK</p>
-        <a class="read-more" href="#"><button class="button"><span>Read more</span></button></a>
-        </article>
-    </template>
-<script src="main.js"></script>
-</body>
+        <section id="single">
+            <article class="event">
+                <h1></h1>
+                <h2 class="date">Check the date: <span></span> !</h2>
+                <img src="" alt="">
+                <div class="content"></div>
+                <img src="" alt="">
+                <div class="info">
+                <p class="venue">Location: <span></span></p>
+                <p class="price">Price: <span></span> DKK</p>
+                <button class="btn">BUY</button>
+            </div>
+                    </article>
+        </section>
+        <script src="main.js"></script>
+    </body>
 </html>
