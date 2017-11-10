@@ -1,9 +1,19 @@
+
+function openNav() {
+    document.querySelector('#mySidenav').style.width = "100%";
+}
+
+function closeNav() {
+    document.querySelector('#mySidenav').style.width = "0";
+}
+
+//JSON DATA Manipulation
 function getAllEvents(){
     fetch("http://calindima.com/wordpress/wp-json/wp/v2/events?_embed&categories=18").then(res=>res.json()).then(showEvents);
 }
 
 function getEventsByGenre(genreId){
-    fetch("http://calindima.com/wordpress/wp-json/wp/v2/events?_embed&genre="+genreId).then(res=>res.json()).then(showEvents);
+    fetch("http://calindima.com/wordpress/wp-json/wp/v2/events?_embed&categories="+genreId).then(res=>res.json()).then(showEvents);
 }
 
 function getSingleEvent(eventId){
@@ -11,14 +21,14 @@ function getSingleEvent(eventId){
 }
 
 function getMenu(){
-    fetch("http://calindima.com/wordpress/wp-json/wp/v2/genre").then(res=>res.json()).then(showMenu);
+    fetch("http://calindima.com/wordpress/wp-json/wp/v2/categories").then(res=>res.json()).then(showMenu);
 }
 
 function showMenu(genres){
     //console.log(genres);
     let linkTemplate = document.querySelector('#linkTemplate').content;
     genres.forEach(function(genre){
-        if(genre.count > 0 && genre.id == 52 || genre.id == 53 ){
+        if(genre.count > 0 && genre.parent == 18 ){
         let clone = linkTemplate.cloneNode(true);
         let parent = document.querySelector('.genre-menu');
 
@@ -78,3 +88,5 @@ else if(genreid){
 else{
     getAllEvents();
 }
+
+//Genres are actually subcategories in the WP website. I was lazy //and didn't replace genres/genre with categories/category.
