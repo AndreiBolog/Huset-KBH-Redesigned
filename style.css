@@ -4,6 +4,7 @@
 }
 body {
     font-family: "Avenir", sans-serif;
+    background-color: #f9ea9a;
 }
 
 /* Navigation */
@@ -11,9 +12,13 @@ body {
 .navibar{
     display: grid;
     grid-template-columns: 1fr 3fr 3fr;
+    background-color:#684e32;
 }
 .navibar span{
     text-align: center;
+    color:#f9ea9a;
+    font-size:30px;
+    cursor:pointer;
 }
 .sidenav {
     height: 100%;
@@ -22,7 +27,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #684e32;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -33,7 +38,7 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #f9ea9a;
     display: block;
     transition: 0.3s;
 
@@ -62,11 +67,12 @@ input[type=text] {
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    background-color: white;
+    background-color: #f9ea9a;
     background-image: url('searchicon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
+    margin:5px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
@@ -78,7 +84,12 @@ input[type=text]:focus {
 svg{
     width: 100%;
 }
-
+.st0{
+    fill:#f9ea9a;
+}
+.st0{
+    fill:#f9ea9a;
+}
 /* Other */
 h1{
     font-size: 28px;
@@ -90,14 +101,25 @@ h2{
 img{
     width: 100%;
     padding: 5% 0 5% 0;
+    border-radius: 10px;
+    border: 0;
 }
 article{
     margin: 10%;
+    background-color: #c5b871;
+    padding: 2%;
+
+    box-shadow: 10px 10px 5px #888888;
+}
+section{
+    background-color:#f9ea9a;
+    color: #5d3a00;
 }
 .price{
     margin:5% 0 5% 0;
     font-size:20px;
     font-weight: 700;
+    color: #5d3a00;
 }
 .btn{
     width: 150px;
@@ -107,16 +129,17 @@ article{
     cursor: pointer;
 
     border-radius: 10px;
-    box-shadow: 0 5px #999;
+    border: 0;
+    box-shadow: 0 7px #5d3a00;
 
-    background-color:;
-    color:;
+    background-color:#9b8816;
+    color:#5d3a00;
 }
 .btn:hover{
 
 }
 .btn:active{
-    box-shadow: 0 2px #666;
+    box-shadow: 0 3px #5d3a00;
   transform: translateY(4px);
 }
 #single .info{
@@ -136,16 +159,15 @@ article{
 }
 .button {
   border-radius: 4px;
-  background-color: #f4511e;
+  background-color: #9b8816;
   border: none;
-  color: #FFFFFF;
+  color: #5d3a00;
   text-align: center;
   font-size: 24px;
   padding: 10px;
   width: 200px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
 }
 
 .button span {
