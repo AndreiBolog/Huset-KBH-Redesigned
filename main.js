@@ -11,6 +11,9 @@ function closeNav() {
 function getAllEvents(){
     fetch("http://calindima.com/wordpress/wp-json/wp/v2/events?_embed&categories=18").then(res=>res.json()).then(showEvents);
 }
+function getEventsBySearch(searchId){
+    fetch("http://calindima.com/wordpress/wp-json/wp/v2/events?_embed&categories=18&search="+searchId).then(e=>e.json()).then(showEvents);
+}
 
 function getEventsByGenre(genreId){
     fetch("http://calindima.com/wordpress/wp-json/wp/v2/events?_embed&categories="+genreId).then(res=>res.json()).then(showEvents);
@@ -76,11 +79,15 @@ function showEvents(data){
 let searchParams = new URLSearchParams(window.location.search);
 let id = searchParams.get("id");
 let genreid = searchParams.get('genreid');
+let searchid = searchParams.get('search');
 
 getMenu();
 
 if(id){
     getSingleEvent(id);
+}
+else if(searchid){
+    getEventsBySearch(searchid);
 }
 else if(genreid){
     getEventsByGenre(genreid);
