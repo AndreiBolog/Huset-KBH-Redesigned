@@ -32,13 +32,13 @@ function showMenu(genres){
     let linkTemplate = document.querySelector('#linkTemplate').content;
     genres.forEach(function(genre){
         if(genre.count > 0 && genre.parent == 18 ){
-        let clone = linkTemplate.cloneNode(true);
-        let parent = document.querySelector('.genre-menu');
+            let clone = linkTemplate.cloneNode(true);
+            let parent = document.querySelector('.genre-menu');
 
-        clone.querySelector('a').textContent=genre.name;
-        clone.querySelector('a').setAttribute('href','index.html?genreid='+genre.id);
+            clone.querySelector('a').textContent=genre.name;
+            clone.querySelector('a').setAttribute('href','index.html?genreid='+genre.id);
 
-        parent.appendChild(clone);}});
+            parent.appendChild(clone);}});
 }
 
 function showSingleEvent(data){
@@ -48,7 +48,7 @@ function showSingleEvent(data){
     document.querySelector('#single img').setAttribute('src',data._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url);
     document.querySelector('.content').innerHTML=data.content.rendered;
     document.querySelector('.price span').textContent=data.acf.price;
-        document.querySelector('.venue span').textContent=data.acf.venue;
+    document.querySelector('.venue span').textContent=data.acf.venue;
 
 
 }
