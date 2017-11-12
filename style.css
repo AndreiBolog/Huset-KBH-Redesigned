@@ -11,7 +11,7 @@ body {
 
 .navibar{
     display: grid;
-    grid-template-columns: 1fr 3fr 3fr;
+    grid-template-columns: 1fr 4fr 3fr;
     background-color:#684e32;
 }
 .navibar span{
@@ -58,19 +58,20 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
 
 input[type=text] {
     width: 130px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid #f9ea9a;
     border-radius: 4px;
     font-size: 16px;
     background-color: #f9ea9a;
     background-image: url('searchicon.png');
     background-position: 10px 10px;
+    background-size:20px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
     margin:5px;
@@ -87,9 +88,7 @@ svg{
     align-self: center;
 }
 .st0{
-    fill:#f9ea9a;
-}
-.st0{
+    stroke:#f9ea9a;
     fill:#f9ea9a;
 }
 /* Other */
@@ -142,7 +141,7 @@ section{
 }
 .btn:active{
     box-shadow: 0 3px #5d3a00;
-  transform: translateY(4px);
+    transform: translateY(4px);
 }
 #single .info{
     display: grid;
@@ -161,39 +160,54 @@ section{
     grid-area: loc;
 }
 .button {
-  border-radius: 4px;
-  background-color: #9b8816;
-  border: none;
-  color: #5d3a00;
-  text-align: center;
-  font-size: 24px;
-  padding: 10px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
+    border-radius: 4px;
+    background-color: #9b8816;
+    border: none;
+    color: #5d3a00;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
 }
 
 .button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 }
 
 .button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
 }
 
 .button:hover span {
-  padding-right: 25px;
+    padding-right: 25px;
 }
 
 .button:hover span:after {
-  opacity: 1;
-  right: 0;
+    opacity: 1;
+    right: 0;
+}
+
+
+/* svg animation */
+.st0{
+    fill-opacity: 0;
+    stroke-dasharray:1000;
+    stroke-dashoffset:1000;
+    animation: dash 4s linear forwards;
+}
+@keyframes dash{
+    to{
+        stroke-dashoffset:0;
+        fill-opacity:1;
+    }
 }
