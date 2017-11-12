@@ -1,9 +1,14 @@
+@font-face{
+    font-family: 'Avenir';
+    src: url('Avenir.ttc');
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: "Avenir", sans-serif;
+    font-family: 'Avenir', sans-serif;
     background-color: #f9ea9a;
 }
 
