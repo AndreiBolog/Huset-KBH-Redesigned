@@ -1,3 +1,6 @@
+document.querySelector('.navibar span').addEventListener('click',openNav);
+
+document.querySelector('#mySidenav a').addEventListener('click',closeNav);
 
 function openNav() {
     document.querySelector('#mySidenav').style.width = "100%";
