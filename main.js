@@ -67,11 +67,14 @@ function showEvents(data){
         let title = clone.querySelector("h1");
         let excerpt = clone.querySelector(".excerpt");
         let price = clone.querySelector(".price span");
-        let img = clone.querySelector("img");
+        let img = clone.querySelector(".poster");
         let link = clone.querySelector("a.read-more");
+        let icon = clone.querySelector('.genre');
 
         img.setAttribute('src',theEvent._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url);
         title.textContent=theEvent.title.rendered;
+
+        icon.setAttribute('src',theEvent.acf.genre.url);
         excerpt.innerHTML=theEvent.excerpt.rendered.slice(theEvent.excerpt.rendered.indexOf('<'),theEvent.excerpt.rendered.lastIndexOf('<a'));
         price.textContent=theEvent.acf.price;
         link.setAttribute('href','event.html?id='+theEvent.id);
@@ -98,5 +101,13 @@ else if(genreid){
 else{
     getAllEvents();
 }
+
+//go button for search ?really neccessary
+    //categories showing on site - added icons
+//bert test
+    //add icons to text
+//add icons to menu ?maybe
+    //google material design
+//remake logo
 
 //Genres are actually subcategories in the WP website. I was lazy //and didn't replace genres/genre with categories/category.
