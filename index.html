@@ -10,11 +10,11 @@
     <body>
         <div class="navibar">
             <span>&#9776;</span>
-            <form>
+            <form action="#">
                 <input type="text" name="search" placeholder="Search..">
             </form>
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 viewBox="0 0 800 200" style="enable-background:new 0 0 800 200;" xml:space="preserve">
+            <a href="index.html"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                       viewBox="0 0 800 200" style="enable-background:new 0 0 800 200;" xml:space="preserve">
                 <g>
                     <path class="st0" d="M190.8,96.2c-1.4,0-2.5-1.1-2.5-2.5V16.9h-15.8V89c0,1.4-1.1,2.5-2.5,2.5h-49.6c-1.4,0-2.5-1.1-2.5-2.5V16.9
                                          h-15.8v76.8c0,1.4-1.1,2.5-2.5,2.5s-2.5-1.1-2.5-2.5V14.4c0-1.4,1.1-2.5,2.5-2.5h20.8c1.4,0,2.5,1.1,2.5,2.5v72.1h44.6V14.4
@@ -61,7 +61,7 @@
                                          c1.4,0,2.5,1.1,2.5,2.5c0,1.4-1.1,2.5-2.5,2.5h-36.8l42,42l42-42h-36.6c-1.4,0-2.5-1.1-2.5-2.5c0-1.4,1.1-2.5,2.5-2.5h42.7
                                          c1,0,1.9,0.6,2.3,1.5c0.4,0.9,0.2,2-0.5,2.7l-48,48C696.8,189.6,696.1,189.9,695.5,189.9L695.5,189.9z"/>
                 </g>
-            </svg>
+                </svg></a>
         </div>
         <nav id="mySidenav" class="genre-menu sidenav">
             <a href="javascript:void(0)" class="closebtn">&times;</a>
@@ -79,11 +79,12 @@
         </section>
         <template id="eventTemplate">
             <article class="event">
+                <img class="genre" src="" alt="">
                 <h1></h1>
-                <img src="" alt="">
+                <img class="poster" src="" alt="">
                 <div class="excerpt"></div>
                 <p class="price">Price: <span></span> DKK</p>
-                <a class="read-more" href="#"><button class="button"><span>Read more</span></button></a>
+                <div><a class="read-more" href="#"><button class="button"><span>Read more</span></button></a></div>
             </article>
         </template>
         <script src="main.js"></script>
