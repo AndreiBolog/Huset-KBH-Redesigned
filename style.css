@@ -101,7 +101,11 @@ svg{
 }
 .st0{
     stroke:#f9ea9a;
-    fill:#f9ea9a;
+    fill:none;
+    stroke-width:6;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
 }
 /* Other */
 h1{
@@ -223,7 +227,7 @@ section{
     fill-opacity: 0;
     stroke-dasharray:1000;
     stroke-dashoffset:1000;
-    animation: dash 4s linear forwards;
+    animation: dash 4.5s linear forwards;
 }
 @keyframes dash{
     to{

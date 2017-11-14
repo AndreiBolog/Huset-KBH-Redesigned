@@ -12,7 +12,7 @@ function closeNav() {
 
 //JSON DATA Manipulation
 function getAllEvents(){
-    fetch("http://calindima.com/wordpress/wp-json/wp/v2/events?_embed&categories=18").then(res=>res.json()).then(showEvents);
+    fetch("http://calindima.com/wordpress/wp-json/wp/v2/events?_embed&per_page=100&categories=18").then(res=>res.json()).then(showEvents);
 }
 function getEventsBySearch(searchId){
     fetch("http://calindima.com/wordpress/wp-json/wp/v2/events?_embed&categories=18&search="+searchId).then(e=>e.json()).then(showEvents);
@@ -75,7 +75,7 @@ function showEvents(data){
         title.textContent=theEvent.title.rendered;
 
         icon.setAttribute('src',theEvent.acf.genre.url);
-        excerpt.innerHTML=theEvent.excerpt.rendered.slice(theEvent.excerpt.rendered.indexOf('<'),theEvent.excerpt.rendered.lastIndexOf('<a'));
+        excerpt.innerHTML=theEvent.excerpt.rendered.slice(theEvent.excerpt.rendered.indexOf('<'),100)+'...</p>';
         price.textContent=theEvent.acf.price;
         link.setAttribute('href','event.html?id='+theEvent.id);
         list.appendChild(clone);
@@ -102,12 +102,12 @@ else{
     getAllEvents();
 }
 
-//go button for search ?really neccessary
+    //go button for search ?really neccessary //user testing says NO
     //categories showing on site - added icons
-//bert test
+//bert test & other ux tests
     //add icons to text
 //add icons to menu ?maybe
     //google material design
-//remake logo
+    //remake logo
 
 //Genres are actually subcategories in the WP website. I was lazy //and didn't replace genres/genre with categories/category.
